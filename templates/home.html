@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>karthikeya Learning</title>
+</head>
+<body>
+  <div>
+    {% include "nav.html" %}
+  </div>
+  <div class= "container">
+      <div class="mt-5 text-center">
+        <h2>Karthikeya Learning</h2>
+      </div>
+    
+      <div class="img-fluid mt-4">
+        <img src="https://karthikeyalearning--karthikeyajanja.repl.co/static/learning.jpeg" height = 500px width = 100%>
+      </div>
+    
+      <div class="lead mt-4 text-center">
+        <h3 class=mt-4 text-center">About</h3>
+        <p class=mt-4 text-center">Learning is the process of acquiring new understanding, knowledge, behaviors, skills, values, attitudes, and preferences.[1] The ability to learn is possessed by humans, animals, and some machines; there is also evidence for some kind of learning in certain plants.[2] Some learning is immediate, induced by a single event (e.g. being burned by a hot stove), but much skill and knowledge accumulate from repeated experiences.[3] The changes induced by learning often last a lifetime, and it is hard to distinguish learned material that seems to be "lost" from that which cannot be retrieved.[4]</p>
+      </div>
+    
+      <div class="mt-4 text-center">
+        <h3>Job Openings</h3>
+      </div>
+        <div class="row">
+          <div class="col-8"> 
+            {% for i in jobs %}
+            {% include "job_detais.html" %}
+            {% endfor %}
+          </div>
+
+            
+  
+  
+
+</body>
+</html>
