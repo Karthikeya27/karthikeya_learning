@@ -1,5 +1,6 @@
 from sqlalchemy import create_engine,text
-connection_string = "mysql+mysqlconnector://yhf3lqjz3d3x4j9qt5c0:pscale_pw_FMKMuGsjJ4OF0uwvQ03QuP4MQkE2ztuqGPvAIVvtWB6@aws.connect.psdb.cloud:3306/kittusdatabase"
+import os
+connection_string = os.environ["database_connection"]
 
 
 engine = create_engine(connection_string, echo=True)
