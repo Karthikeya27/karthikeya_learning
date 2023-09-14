@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>{{job["job_title"]}}Job Page </title>
+  </head>
+
+  <body>
+    <h2> Job title</h2>
+    {{job["job_title"]}}
+    <h2> Salary</h2>
+    {{job["salary"]}}
+    <h2>Location</h2>
+    {{job["job_location"]}}
+    <h2>Skills</h2>
+    <ul>
+      {% for i in job.skills.split("\n") %}
+      <li>
+        {{i}}
+      </li>
+      {% endfor %}
+    </ul>
+    
+    <h2>Responsibilities</h2>
+    <ol>
+        {% for i in job.responsibilities.split("\n") %}
+          <li>
+            {{i}}
+          </li>
+        {% endfor %}
+    </ol>
+    {% include "application.html" %}
+  </body>
+  
+</html>
